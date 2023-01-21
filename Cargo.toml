@@ -1,0 +1,33 @@
+[package]
+name = "simple-login"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name="main"
+path="src/main.rs"
+
+[lib]
+name="lib"
+path="src/lib.rs"
+
+
+[dependencies]
+actix-web = "4.0.1"
+serde_json = "1.0.81"
+config = "0.11"
+serde = "1.0.115"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+actix-cors = "0.6.4"
+magic-crypt = "3.1.12"
+jwt-simple = "0.11.3"
+actix-lab = "0.1.0"
+actix-web-lab = "0.18.9"
+bson = "2.5.0"
+regex = "1.7.1"
+
+[dependencies.mongodb]
+version = "2.2.0"
+default-features = false
+features = ["async-std-runtime"]
+
